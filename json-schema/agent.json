@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-cloud-dialogflow-cx/refs/heads/main/json-schema/agent.json",
+  "title": "Agent",
+  "description": "A Dialogflow CX agent resource representing a conversational virtual agent.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Resource name of the agent."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Human-readable name of the agent."
+    },
+    "defaultLanguageCode": {
+      "type": "string",
+      "description": "Default language of the agent as a BCP-47 language tag."
+    },
+    "supportedLanguageCodes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of additional supported language codes."
+    },
+    "timeZone": {
+      "type": "string",
+      "description": "Time zone of the agent from the IANA time zone database."
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the agent."
+    },
+    "avatarUri": {
+      "type": "string",
+      "format": "uri",
+      "description": "URI of the agent avatar."
+    },
+    "startFlow": {
+      "type": "string",
+      "description": "Name of the start flow in the agent."
+    },
+    "securitySettings": {
+      "type": "string",
+      "description": "Name of the security settings resource."
+    },
+    "enableStackdriverLogging": {
+      "type": "boolean",
+      "description": "Whether to enable Stackdriver logging for the agent."
+    },
+    "enableSpellCorrection": {
+      "type": "boolean",
+      "description": "Whether to enable spell correction for the agent."
+    },
+    "locked": {
+      "type": "boolean",
+      "description": "Whether the agent is locked for changes."
+    },
+    "speechToTextSettings": {
+      "type": "object",
+      "description": "Speech-to-text settings.",
+      "properties": {
+        "enableSpeechAdaptation": {
+          "type": "boolean",
+          "description": "Whether to use speech adaptation."
+        }
+      }
+    }
+  },
+  "required": ["displayName", "defaultLanguageCode", "timeZone"]
+}

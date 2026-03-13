@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcloud": "https://cloud.google.com/dialogflow/cx/docs/reference/rest/v3/",
+    "Agent": "gcloud:projects.locations.agents",
+    "Flow": "gcloud:projects.locations.agents.flows",
+    "Intent": "gcloud:projects.locations.agents.intents",
+    "Session": "gcloud:projects.locations.agents.sessions",
+    "name": "https://schema.org/name",
+    "displayName": "https://schema.org/name",
+    "description": "https://schema.org/description",
+    "defaultLanguageCode": "https://schema.org/inLanguage",
+    "supportedLanguageCodes": "https://schema.org/availableLanguage",
+    "timeZone": "https://schema.org/timezone",
+    "avatarUri": "https://schema.org/image",
+    "startFlow": {
+      "@id": "https://schema.org/hasPart",
+      "@type": "@id"
+    },
+    "trainingPhrases": "https://schema.org/text",
+    "transitionRoutes": "https://schema.org/potentialAction"
+  }
+}

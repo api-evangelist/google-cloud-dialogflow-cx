@@ -1,0 +1,508 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Dialogflow CX API
+  description: >-
+    The Dialogflow CX API enables building and managing conversational agents
+    with flows, pages, intents, entity types, and session management for
+    advanced multi-turn conversations.
+  version: 3.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/dialogflow/cx/docs
+servers:
+  - url: https://dialogflow.googleapis.com/v3
+    description: Google Cloud Dialogflow CX Production
+paths:
+  /projects/{projectId}/locations/{location}/agents:
+    get:
+      operationId: listAgents
+      summary: List agents
+      description: Lists all agents in a project and location.
+      tags:
+        - Agents
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  agents:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Agent'
+    post:
+      operationId: createAgent
+      summary: Create an agent
+      description: Creates a new Dialogflow CX agent.
+      tags:
+        - Agents
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+  /projects/{projectId}/locations/{location}/agents/{agentId}:
+    get:
+      operationId: getAgent
+      summary: Get an agent
+      description: Retrieves a specific agent by ID.
+      tags:
+        - Agents
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+    patch:
+      operationId: updateAgent
+      summary: Update an agent
+      description: Updates an existing agent.
+      tags:
+        - Agents
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+    delete:
+      operationId: deleteAgent
+      summary: Delete an agent
+      description: Deletes a specific agent.
+      tags:
+        - Agents
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+  /projects/{projectId}/locations/{location}/agents/{agentId}/flows:
+    get:
+      operationId: listFlows
+      summary: List flows
+      description: Lists all flows in an agent.
+      tags:
+        - Flows
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  flows:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Flow'
+    post:
+      operationId: createFlow
+      summary: Create a flow
+      description: Creates a new flow within an agent.
+      tags:
+        - Flows
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Flow'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Flow'
+  /projects/{projectId}/locations/{location}/agents/{agentId}/intents:
+    get:
+      operationId: listIntents
+      summary: List intents
+      description: Lists all intents in an agent.
+      tags:
+        - Intents
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  intents:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Intent'
+    post:
+      operationId: createIntent
+      summary: Create an intent
+      description: Creates a new intent within an agent.
+      tags:
+        - Intents
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Intent'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Intent'
+  /projects/{projectId}/locations/{location}/agents/{agentId}/sessions/{sessionId}:detectIntent:
+    post:
+      operationId: detectIntent
+      summary: Detect intent
+      description: Processes a natural language query and returns structured, actionable data.
+      tags:
+        - Sessions
+      parameters:
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: agentId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: sessionId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                queryInput:
+                  type: object
+                  properties:
+                    text:
+                      type: object
+                      properties:
+                        text:
+                          type: string
+                    languageCode:
+                      type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  responseId:
+                    type: string
+                  queryResult:
+                    type: object
+                    properties:
+                      text:
+                        type: string
+                      intent:
+                        $ref: '#/components/schemas/Intent'
+                      intentDetectionConfidence:
+                        type: number
+                      responseMessages:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            text:
+                              type: object
+                              properties:
+                                text:
+                                  type: array
+                                  items:
+                                    type: string
+components:
+  schemas:
+    Agent:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the agent.
+        displayName:
+          type: string
+          description: Human-readable name of the agent.
+        defaultLanguageCode:
+          type: string
+          description: Default language of the agent.
+        supportedLanguageCodes:
+          type: array
+          items:
+            type: string
+          description: List of additional supported languages.
+        timeZone:
+          type: string
+          description: Time zone of the agent.
+        description:
+          type: string
+          description: Description of the agent.
+        startFlow:
+          type: string
+          description: Name of the start flow in the agent.
+        enableStackdriverLogging:
+          type: boolean
+          description: Whether to enable Stackdriver logging.
+        enableSpellCorrection:
+          type: boolean
+          description: Whether to enable spell correction.
+    Flow:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the flow.
+        displayName:
+          type: string
+          description: Human-readable name of the flow.
+        description:
+          type: string
+          description: Description of the flow.
+        transitionRoutes:
+          type: array
+          items:
+            type: object
+            properties:
+              intent:
+                type: string
+              condition:
+                type: string
+              targetPage:
+                type: string
+              targetFlow:
+                type: string
+        eventHandlers:
+          type: array
+          items:
+            type: object
+            properties:
+              event:
+                type: string
+              targetPage:
+                type: string
+              targetFlow:
+                type: string
+    Intent:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the intent.
+        displayName:
+          type: string
+          description: Human-readable name of the intent.
+        trainingPhrases:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              parts:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    text:
+                      type: string
+                    parameterId:
+                      type: string
+              repeatCount:
+                type: integer
+        parameters:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              entityType:
+                type: string
+              isList:
+                type: boolean
+        priority:
+          type: integer
+          description: Priority of the intent.
+        isFallback:
+          type: boolean
+          description: Whether this is a fallback intent.
+        description:
+          type: string
+          description: Description of the intent.
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/dialogflow: Manage Dialogflow agents
+            https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud
