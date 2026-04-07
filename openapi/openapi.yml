@@ -16,7 +16,7 @@ paths:
   /projects/{projectId}/locations/{location}/agents:
     get:
       operationId: listAgents
-      summary: List agents
+      summary: Google Cloud Dialogflow CX List agents
       description: Lists all agents in a project and location.
       tags:
         - Agents
@@ -45,7 +45,7 @@ paths:
                       $ref: '#/components/schemas/Agent'
     post:
       operationId: createAgent
-      summary: Create an agent
+      summary: Google Cloud Dialogflow CX Create an agent
       description: Creates a new Dialogflow CX agent.
       tags:
         - Agents
@@ -76,7 +76,7 @@ paths:
   /projects/{projectId}/locations/{location}/agents/{agentId}:
     get:
       operationId: getAgent
-      summary: Get an agent
+      summary: Google Cloud Dialogflow CX Get an agent
       description: Retrieves a specific agent by ID.
       tags:
         - Agents
@@ -105,7 +105,7 @@ paths:
                 $ref: '#/components/schemas/Agent'
     patch:
       operationId: updateAgent
-      summary: Update an agent
+      summary: Google Cloud Dialogflow CX Update an agent
       description: Updates an existing agent.
       tags:
         - Agents
@@ -140,7 +140,7 @@ paths:
                 $ref: '#/components/schemas/Agent'
     delete:
       operationId: deleteAgent
-      summary: Delete an agent
+      summary: Google Cloud Dialogflow CX Delete an agent
       description: Deletes a specific agent.
       tags:
         - Agents
@@ -166,7 +166,7 @@ paths:
   /projects/{projectId}/locations/{location}/agents/{agentId}/flows:
     get:
       operationId: listFlows
-      summary: List flows
+      summary: Google Cloud Dialogflow CX List flows
       description: Lists all flows in an agent.
       tags:
         - Flows
@@ -200,7 +200,7 @@ paths:
                       $ref: '#/components/schemas/Flow'
     post:
       operationId: createFlow
-      summary: Create a flow
+      summary: Google Cloud Dialogflow CX Create a flow
       description: Creates a new flow within an agent.
       tags:
         - Flows
@@ -236,7 +236,7 @@ paths:
   /projects/{projectId}/locations/{location}/agents/{agentId}/intents:
     get:
       operationId: listIntents
-      summary: List intents
+      summary: Google Cloud Dialogflow CX List intents
       description: Lists all intents in an agent.
       tags:
         - Intents
@@ -270,7 +270,7 @@ paths:
                       $ref: '#/components/schemas/Intent'
     post:
       operationId: createIntent
-      summary: Create an intent
+      summary: Google Cloud Dialogflow CX Create an intent
       description: Creates a new intent within an agent.
       tags:
         - Intents
@@ -306,7 +306,7 @@ paths:
   /projects/{projectId}/locations/{location}/agents/{agentId}/sessions/{sessionId}:detectIntent:
     post:
       operationId: detectIntent
-      summary: Detect intent
+      summary: Google Cloud Dialogflow CX Detect intent
       description: Processes a natural language query and returns structured, actionable data.
       tags:
         - Sessions
