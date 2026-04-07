@@ -506,3 +506,8 @@ components:
           scopes:
             https://www.googleapis.com/auth/dialogflow: Manage Dialogflow agents
             https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud
+tags:
+  - name: Agents
+  - name: Flows
+  - name: Intents
+  - name: Sessions

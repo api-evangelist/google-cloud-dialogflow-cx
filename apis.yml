@@ -12,10 +12,10 @@ modified: '2026-03-16'
 specificationVersion: '0.19'
 type: Index
 tags:
-  - Google Cloud
-  - Dialogflow
-  - Conversational AI
   - Chatbots
+  - Conversational AI
+  - Dialogflow
+  - Google Cloud
   - NLU
   - Virtual Agents
 apis:
@@ -27,8 +27,8 @@ apis:
     humanURL: https://cloud.google.com/dialogflow/cx/docs
     baseURL: https://dialogflow.googleapis.com
     tags:
-      - Dialogflow
       - Agents
+      - Dialogflow
       - Flows
       - Intents
     properties:
