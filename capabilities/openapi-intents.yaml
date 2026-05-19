@@ -1,0 +1,144 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Dialogflow CX API — Intents
+  description: 'Google Cloud Dialogflow CX API — Intents. 2 operations. Lead operation: Google Cloud Dialogflow CX List intents.
+    Self-contained Naftiko capability covering one Google Cloud Dialogflow Cx business surface.'
+  tags:
+  - Google Cloud Dialogflow Cx
+  - Intents
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_DIALOGFLOW_CX_API_KEY: GOOGLE_CLOUD_DIALOGFLOW_CX_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: openapi-intents
+    baseUri: https://dialogflow.googleapis.com/v3
+    description: Google Cloud Dialogflow CX API — Intents business capability. Self-contained, no shared references.
+    resources:
+    - name: projects-projectId-locations-location-agents-agentId-intents
+      path: /projects/{projectId}/locations/{location}/agents/{agentId}/intents
+      operations:
+      - name: listintents
+        method: GET
+        description: Google Cloud Dialogflow CX List intents
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: agentId
+          in: path
+          type: string
+          required: true
+      - name: createintent
+        method: POST
+        description: Google Cloud Dialogflow CX Create an intent
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: agentId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_DIALOGFLOW_CX_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: openapi-intents-rest
+    port: 8080
+    description: REST adapter for Google Cloud Dialogflow CX API — Intents. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/projects/{projectid}/locations/{location}/agents/{agentid}/intents
+      name: projects-projectid-locations-location-agents-agentid-intents
+      description: REST surface for projects-projectId-locations-location-agents-agentId-intents.
+      operations:
+      - method: GET
+        name: listintents
+        description: Google Cloud Dialogflow CX List intents
+        call: openapi-intents.listintents
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          agentId: rest.agentId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createintent
+        description: Google Cloud Dialogflow CX Create an intent
+        call: openapi-intents.createintent
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          agentId: rest.agentId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: openapi-intents-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud Dialogflow CX API — Intents. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: google-cloud-dialogflow-cx-list
+      description: Google Cloud Dialogflow CX List intents
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: openapi-intents.listintents
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        agentId: tools.agentId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-dialogflow-cx-create
+      description: Google Cloud Dialogflow CX Create an intent
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: openapi-intents.createintent
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        agentId: tools.agentId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
