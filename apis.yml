@@ -1,7 +1,8 @@
 aid: google-cloud-dialogflow-cx
 name: Google Cloud Dialogflow CX
-description: Google Cloud Dialogflow CX is an advanced conversational AI platform for building complex virtual agents and
-  chatbots. It provides a visual flow builder, advanced NLU capabilities, multi-turn conversation management, and seamless
+description: >-
+  Google Cloud Dialogflow CX is an advanced conversational AI platform for building complex virtual agents and chatbots.
+  It provides a visual flow builder, advanced NLU capabilities, multi-turn conversation management, and seamless
   integration across channels including web, mobile, and telephony.
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-dialogflow-cx/refs/heads/main/apis.yml
@@ -18,36 +19,29 @@ tags:
   - Virtual Agents
 apis:
   - name: Google Cloud Dialogflow CX API
-    description: The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity
+    description: >-
+      The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity
       types, and session management for advanced multi-turn conversations.
     humanURL: https://cloud.google.com/dialogflow/cx/docs
     baseURL: https://dialogflow.googleapis.com
     tags:
-    - Agents
-    - Dialogflow
-    - Flows
-    - Intents
+      - Agents
+      - Dialogflow
+      - Flows
+      - Intents
     properties:
-    - type: Documentation
-      url: https://cloud.google.com/dialogflow/cx/docs/reference/rest
-    - type: OpenAPI
-      url: openapi/openapi.yml
-    - type: Authentication
-      url: https://cloud.google.com/dialogflow/cx/docs/concept/auth
-    - type: GettingStarted
-      url: https://cloud.google.com/dialogflow/cx/docs/quick
-    - type: JSONSchema
-      url: json-schema/agent.json
-    - type: JSONLDContext
-      url: json-ld/context.jsonld
-    - type: NaftikoCapability
-      url: capabilities/openapi-agents.yaml
-    - type: NaftikoCapability
-      url: capabilities/openapi-flows.yaml
-    - type: NaftikoCapability
-      url: capabilities/openapi-intents.yaml
-    - type: NaftikoCapability
-      url: capabilities/openapi-sessions.yaml
+      - type: Documentation
+        url: https://cloud.google.com/dialogflow/cx/docs/reference/rest
+      - type: OpenAPI
+        url: openapi/openapi.yml
+      - type: Authentication
+        url: https://cloud.google.com/dialogflow/cx/docs/concept/auth
+      - type: GettingStarted
+        url: https://cloud.google.com/dialogflow/cx/docs/quick
+      - type: JSONSchema
+        url: json-schema/agent.json
+      - type: JSONLDContext
+        url: json-ld/context.jsonld
 common:
   - type: GitHubOrganization
     url: https://github.com/googleapis
