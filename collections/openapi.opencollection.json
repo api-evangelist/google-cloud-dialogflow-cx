@@ -1,0 +1,337 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Dialogflow CX API",
+    "version": "3.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Agents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX List agents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all agents in a project and location."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Create an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new Dialogflow CX agent."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Get an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a specific agent by ID."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Update an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing agent."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Delete an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a specific agent."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Flows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX List flows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/flows",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all flows in an agent."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Create a flow",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/flows",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new flow within an agent."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Intents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX List intents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/intents",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all intents in an agent."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Create an intent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/intents",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new intent within an agent."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sessions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Detect intent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/sessions/:sessionId:detectIntent",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sessionId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Processes a natural language query and returns structured, actionable data."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
