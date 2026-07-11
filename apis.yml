@@ -43,6 +43,12 @@ apis:
       - type: JSONLDContext
         url: json-ld/context.jsonld
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-cloud-dialogflow-cx-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-cloud-dialogflow-cx-domain-security.yml
+  - type: Authentication
+    url: authentication/google-cloud-dialogflow-cx-authentication.yml
   - type: OAuthScopes
     url: scopes/google-cloud-dialogflow-cx-scopes.yml
   - type: GitHubOrganization
