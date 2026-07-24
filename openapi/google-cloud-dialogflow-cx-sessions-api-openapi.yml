@@ -1,0 +1,149 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Dialogflow CX Agents Sessions API
+  description: The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.
+  version: 3.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/dialogflow/cx/docs
+servers:
+- url: https://dialogflow.googleapis.com/v3
+  description: Google Cloud Dialogflow CX Production
+tags:
+- name: Sessions
+paths:
+  /projects/{projectId}/locations/{location}/agents/{agentId}/sessions/{sessionId}:detectIntent:
+    post:
+      operationId: detectIntent
+      summary: Google Cloud Dialogflow CX Detect intent
+      description: Processes a natural language query and returns structured, actionable data.
+      tags:
+      - Sessions
+      parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sessionId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                queryInput:
+                  type: object
+                  properties:
+                    text:
+                      type: object
+                      properties:
+                        text:
+                          type: string
+                    languageCode:
+                      type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  responseId:
+                    type: string
+                  queryResult:
+                    type: object
+                    properties:
+                      text:
+                        type: string
+                      intent:
+                        $ref: '#/components/schemas/Intent'
+                      intentDetectionConfidence:
+                        type: number
+                      responseMessages:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            text:
+                              type: object
+                              properties:
+                                text:
+                                  type: array
+                                  items:
+                                    type: string
+components:
+  schemas:
+    Intent:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the intent.
+        displayName:
+          type: string
+          description: Human-readable name of the intent.
+        trainingPhrases:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              parts:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    text:
+                      type: string
+                    parameterId:
+                      type: string
+              repeatCount:
+                type: integer
+        parameters:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              entityType:
+                type: string
+              isList:
+                type: boolean
+        priority:
+          type: integer
+          description: Priority of the intent.
+        isFallback:
+          type: boolean
+          description: Whether this is a fallback intent.
+        description:
+          type: string
+          description: Description of the intent.
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/dialogflow: Manage Dialogflow agents
+            https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud

@@ -1,0 +1,208 @@
+openapi: 3.1.0
+info:
+  title: Google Cloud Dialogflow CX Agents API
+  description: The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.
+  version: 3.0.0
+  contact:
+    name: Google Cloud
+    url: https://cloud.google.com/dialogflow/cx/docs
+servers:
+- url: https://dialogflow.googleapis.com/v3
+  description: Google Cloud Dialogflow CX Production
+tags:
+- name: Agents
+paths:
+  /projects/{projectId}/locations/{location}/agents:
+    get:
+      operationId: listAgents
+      summary: Google Cloud Dialogflow CX List agents
+      description: Lists all agents in a project and location.
+      tags:
+      - Agents
+      parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  agents:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Agent'
+    post:
+      operationId: createAgent
+      summary: Google Cloud Dialogflow CX Create an agent
+      description: Creates a new Dialogflow CX agent.
+      tags:
+      - Agents
+      parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+  /projects/{projectId}/locations/{location}/agents/{agentId}:
+    get:
+      operationId: getAgent
+      summary: Google Cloud Dialogflow CX Get an agent
+      description: Retrieves a specific agent by ID.
+      tags:
+      - Agents
+      parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+    patch:
+      operationId: updateAgent
+      summary: Google Cloud Dialogflow CX Update an agent
+      description: Updates an existing agent.
+      tags:
+      - Agents
+      parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Agent'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Agent'
+    delete:
+      operationId: deleteAgent
+      summary: Google Cloud Dialogflow CX Delete an agent
+      description: Deletes a specific agent.
+      tags:
+      - Agents
+      parameters:
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: location
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+components:
+  schemas:
+    Agent:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Resource name of the agent.
+        displayName:
+          type: string
+          description: Human-readable name of the agent.
+        defaultLanguageCode:
+          type: string
+          description: Default language of the agent.
+        supportedLanguageCodes:
+          type: array
+          items:
+            type: string
+          description: List of additional supported languages.
+        timeZone:
+          type: string
+          description: Time zone of the agent.
+        description:
+          type: string
+          description: Description of the agent.
+        startFlow:
+          type: string
+          description: Name of the start flow in the agent.
+        enableStackdriverLogging:
+          type: boolean
+          description: Whether to enable Stackdriver logging.
+        enableSpellCorrection:
+          type: boolean
+          description: Whether to enable spell correction.
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/dialogflow: Manage Dialogflow agents
+            https://www.googleapis.com/auth/cloud-platform: Full access to Google Cloud
