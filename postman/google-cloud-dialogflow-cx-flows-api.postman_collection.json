@@ -1,0 +1,333 @@
+{
+  "info": {
+    "_postman_id": "5fbfba9d-ec69-450f-a142-377d541290dd",
+    "name": "Google Cloud Dialogflow CX Agents Flows API",
+    "description": "The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:47:20.000Z",
+    "updatedAt": "2026-07-28T01:47:21.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5fbfba9d-ec69-450f-a142-377d541290dd"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "{location}",
+                  "item": [
+                    {
+                      "name": "agents",
+                      "item": [
+                        {
+                          "name": "{agentId}",
+                          "item": [
+                            {
+                              "name": "flows",
+                              "item": [
+                                {
+                                  "name": "Google Cloud Dialogflow CX List flows",
+                                  "id": "d3d54c8e-fafd-43e7-a773-cf587529815e",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId/flows",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "agents",
+                                        ":agentId",
+                                        "flows"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "c2d9fabc-ba8d-4dc9-8602-571708fa3ceb",
+                                          "key": "projectId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "50ce0aaa-ac27-4138-bfd9-2d587c0bcfe1",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "e3e79725-796e-4d70-81ed-5e2ba5bf2ddd",
+                                          "key": "agentId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Lists all flows in an agent."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "b3caaeb4-3050-4d4b-bd1d-ec6256c5501c",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "url": {
+                                          "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId/flows",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "projects",
+                                            ":projectId",
+                                            "locations",
+                                            ":location",
+                                            "agents",
+                                            ":agentId",
+                                            "flows"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "projectId"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "agentId"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"flows\": [\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"transitionRoutes\": [\n        {\n          \"intent\": \"<string>\",\n          \"condition\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        },\n        {\n          \"intent\": \"<string>\",\n          \"condition\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        }\n      ],\n      \"eventHandlers\": [\n        {\n          \"event\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        },\n        {\n          \"event\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"transitionRoutes\": [\n        {\n          \"intent\": \"<string>\",\n          \"condition\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        },\n        {\n          \"intent\": \"<string>\",\n          \"condition\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        }\n      ],\n      \"eventHandlers\": [\n        {\n          \"event\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        },\n        {\n          \"event\": \"<string>\",\n          \"targetPage\": \"<string>\",\n          \"targetFlow\": \"<string>\"\n        }\n      ]\n    }\n  ]\n}",
+                                      "createdAt": "2026-07-28T01:47:21.000Z",
+                                      "updatedAt": "2026-07-28T01:47:21.000Z",
+                                      "uid": "35240-b3caaeb4-3050-4d4b-bd1d-ec6256c5501c"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:47:21.000Z",
+                                  "updatedAt": "2026-07-28T01:47:21.000Z",
+                                  "uid": "35240-d3d54c8e-fafd-43e7-a773-cf587529815e"
+                                },
+                                {
+                                  "name": "Google Cloud Dialogflow CX Create a flow",
+                                  "id": "0e6db068-eca9-48be-8432-607d7bef8d12",
+                                  "protocolProfileBehavior": {
+                                    "disableBodyPruning": true
+                                  },
+                                  "request": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"transitionRoutes\": [\n    {\n      \"intent\": \"<string>\",\n      \"condition\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    },\n    {\n      \"intent\": \"<string>\",\n      \"condition\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    }\n  ],\n  \"eventHandlers\": [\n    {\n      \"event\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    },\n    {\n      \"event\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    }\n  ]\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId/flows",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "agents",
+                                        ":agentId",
+                                        "flows"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "id": "2a342291-3e7d-4e2f-892a-f61cc1f36f2f",
+                                          "key": "projectId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "70401621-83a8-49b7-94d6-795e3de5c63f",
+                                          "key": "location",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        },
+                                        {
+                                          "id": "e5b4529d-2de2-4663-bbd6-52f441dbc9ad",
+                                          "key": "agentId",
+                                          "value": "<string>",
+                                          "description": "(Required) "
+                                        }
+                                      ]
+                                    },
+                                    "description": "Creates a new flow within an agent."
+                                  },
+                                  "response": [
+                                    {
+                                      "id": "db162daa-2d38-4d14-a753-53764314e958",
+                                      "name": "Successful response",
+                                      "originalRequest": {
+                                        "method": "POST",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"transitionRoutes\": [\n    {\n      \"intent\": \"<string>\",\n      \"condition\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    },\n    {\n      \"intent\": \"<string>\",\n      \"condition\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    }\n  ],\n  \"eventHandlers\": [\n    {\n      \"event\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    },\n    {\n      \"event\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    }\n  ]\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId/flows",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "projects",
+                                            ":projectId",
+                                            "locations",
+                                            ":location",
+                                            "agents",
+                                            ":agentId",
+                                            "flows"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "key": "projectId"
+                                            },
+                                            {
+                                              "key": "location"
+                                            },
+                                            {
+                                              "key": "agentId"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "status": "OK",
+                                      "code": 200,
+                                      "_postman_previewlanguage": "json",
+                                      "header": [
+                                        {
+                                          "key": "Content-Type",
+                                          "value": "application/json"
+                                        }
+                                      ],
+                                      "cookie": [],
+                                      "responseTime": null,
+                                      "body": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"transitionRoutes\": [\n    {\n      \"intent\": \"<string>\",\n      \"condition\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    },\n    {\n      \"intent\": \"<string>\",\n      \"condition\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    }\n  ],\n  \"eventHandlers\": [\n    {\n      \"event\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    },\n    {\n      \"event\": \"<string>\",\n      \"targetPage\": \"<string>\",\n      \"targetFlow\": \"<string>\"\n    }\n  ]\n}",
+                                      "createdAt": "2026-07-28T01:47:21.000Z",
+                                      "updatedAt": "2026-07-28T01:47:21.000Z",
+                                      "uid": "35240-db162daa-2d38-4d14-a753-53764314e958"
+                                    }
+                                  ],
+                                  "createdAt": "2026-07-28T01:47:21.000Z",
+                                  "updatedAt": "2026-07-28T01:47:21.000Z",
+                                  "uid": "35240-0e6db068-eca9-48be-8432-607d7bef8d12"
+                                }
+                              ],
+                              "id": "df1be4a6-f167-418b-bf7d-8e6318303700",
+                              "createdAt": "2026-07-28T01:47:21.000Z",
+                              "updatedAt": "2026-07-28T01:47:21.000Z",
+                              "uid": "35240-df1be4a6-f167-418b-bf7d-8e6318303700"
+                            }
+                          ],
+                          "id": "d5fc59a5-ffc2-4844-a42f-c798544928b0",
+                          "createdAt": "2026-07-28T01:47:21.000Z",
+                          "updatedAt": "2026-07-28T01:47:21.000Z",
+                          "uid": "35240-d5fc59a5-ffc2-4844-a42f-c798544928b0"
+                        }
+                      ],
+                      "id": "9558fc1b-eb2d-4228-9618-a6bc2ed2327a",
+                      "createdAt": "2026-07-28T01:47:21.000Z",
+                      "updatedAt": "2026-07-28T01:47:21.000Z",
+                      "uid": "35240-9558fc1b-eb2d-4228-9618-a6bc2ed2327a"
+                    }
+                  ],
+                  "id": "e5b3e4b5-3e7d-4c87-9dbe-a8c9da712b78",
+                  "createdAt": "2026-07-28T01:47:21.000Z",
+                  "updatedAt": "2026-07-28T01:47:21.000Z",
+                  "uid": "35240-e5b3e4b5-3e7d-4c87-9dbe-a8c9da712b78"
+                }
+              ],
+              "id": "e3f38c60-0c46-4f3b-a376-6b9ed3605fb0",
+              "createdAt": "2026-07-28T01:47:21.000Z",
+              "updatedAt": "2026-07-28T01:47:21.000Z",
+              "uid": "35240-e3f38c60-0c46-4f3b-a376-6b9ed3605fb0"
+            }
+          ],
+          "id": "e96d9199-74b8-41ad-a837-72a35825785a",
+          "createdAt": "2026-07-28T01:47:21.000Z",
+          "updatedAt": "2026-07-28T01:47:21.000Z",
+          "uid": "35240-e96d9199-74b8-41ad-a837-72a35825785a"
+        }
+      ],
+      "id": "206b911c-3cfa-4786-90e2-90fde134ec3c",
+      "createdAt": "2026-07-28T01:47:21.000Z",
+      "updatedAt": "2026-07-28T01:47:21.000Z",
+      "uid": "35240-206b911c-3cfa-4786-90e2-90fde134ec3c"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://dialogflow.googleapis.com/v3"
+    }
+  ]
+}

@@ -1,0 +1,638 @@
+{
+  "info": {
+    "_postman_id": "5da30165-a60f-4681-aa68-142627b921ef",
+    "name": "Google Cloud Dialogflow CX Agents API",
+    "description": "The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:47:05.000Z",
+    "updatedAt": "2026-07-28T01:47:05.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5da30165-a60f-4681-aa68-142627b921ef"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "{location}",
+                  "item": [
+                    {
+                      "name": "agents",
+                      "item": [
+                        {
+                          "name": "{agentId}",
+                          "item": [
+                            {
+                              "name": "Google Cloud Dialogflow CX Get an agent",
+                              "id": "a39fb1d4-f53e-40a9-b044-26f31a8867c9",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "agents",
+                                    ":agentId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "bcc3f0b6-6720-4f25-bb45-a9139b955fe6",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "9f04189e-8e6b-4cbc-9d5b-2ce822e0c8c3",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "1c9a777c-797a-43ed-b278-cd9b2acac384",
+                                      "key": "agentId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Retrieves a specific agent by ID."
+                              },
+                              "response": [
+                                {
+                                  "id": "7a1ffec1-9a00-40f8-bffb-35a39df30991",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "agents",
+                                        ":agentId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "agentId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"defaultLanguageCode\": \"<string>\",\n  \"supportedLanguageCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"timeZone\": \"<string>\",\n  \"description\": \"<string>\",\n  \"startFlow\": \"<string>\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableSpellCorrection\": \"<boolean>\"\n}",
+                                  "createdAt": "2026-07-28T01:47:05.000Z",
+                                  "updatedAt": "2026-07-28T01:47:05.000Z",
+                                  "uid": "35240-7a1ffec1-9a00-40f8-bffb-35a39df30991"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:05.000Z",
+                              "updatedAt": "2026-07-28T01:47:05.000Z",
+                              "uid": "35240-a39fb1d4-f53e-40a9-b044-26f31a8867c9"
+                            },
+                            {
+                              "name": "Google Cloud Dialogflow CX Update an agent",
+                              "id": "994fabd8-5f28-47cf-bfba-7d69cb81d7eb",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "PATCH",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"defaultLanguageCode\": \"<string>\",\n  \"supportedLanguageCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"timeZone\": \"<string>\",\n  \"description\": \"<string>\",\n  \"startFlow\": \"<string>\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableSpellCorrection\": \"<boolean>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "agents",
+                                    ":agentId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "90f2f3a2-a61e-4622-b5df-1b5a6b3b2469",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "d23ee387-0e65-49e0-b1a6-f00a7ba64210",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "be2fb782-844b-4a57-b146-aab15a7caf28",
+                                      "key": "agentId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Updates an existing agent."
+                              },
+                              "response": [
+                                {
+                                  "id": "e21d3ef9-1577-4f5a-a673-d7ec95acb14e",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "PATCH",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"defaultLanguageCode\": \"<string>\",\n  \"supportedLanguageCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"timeZone\": \"<string>\",\n  \"description\": \"<string>\",\n  \"startFlow\": \"<string>\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableSpellCorrection\": \"<boolean>\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "agents",
+                                        ":agentId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "agentId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"defaultLanguageCode\": \"<string>\",\n  \"supportedLanguageCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"timeZone\": \"<string>\",\n  \"description\": \"<string>\",\n  \"startFlow\": \"<string>\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableSpellCorrection\": \"<boolean>\"\n}",
+                                  "createdAt": "2026-07-28T01:47:05.000Z",
+                                  "updatedAt": "2026-07-28T01:47:05.000Z",
+                                  "uid": "35240-e21d3ef9-1577-4f5a-a673-d7ec95acb14e"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:05.000Z",
+                              "updatedAt": "2026-07-28T01:47:05.000Z",
+                              "uid": "35240-994fabd8-5f28-47cf-bfba-7d69cb81d7eb"
+                            },
+                            {
+                              "name": "Google Cloud Dialogflow CX Delete an agent",
+                              "id": "18c20523-8af0-473b-91d3-943aca697716",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "agents",
+                                    ":agentId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "4b274417-bd17-4f75-819e-a0482319705f",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "c402cbad-17a8-40ba-b70c-a63b2f2fc25d",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "0b45e3a7-ff22-4cbe-8f02-3359c1935f63",
+                                      "key": "agentId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Deletes a specific agent."
+                              },
+                              "response": [
+                                {
+                                  "id": "b683f0b8-2c0a-44b5-be97-2189ce626356",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "DELETE",
+                                    "header": [],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "agents",
+                                        ":agentId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "agentId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "text",
+                                  "header": [],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": null,
+                                  "createdAt": "2026-07-28T01:47:05.000Z",
+                                  "updatedAt": "2026-07-28T01:47:05.000Z",
+                                  "uid": "35240-b683f0b8-2c0a-44b5-be97-2189ce626356"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:47:05.000Z",
+                              "updatedAt": "2026-07-28T01:47:05.000Z",
+                              "uid": "35240-18c20523-8af0-473b-91d3-943aca697716"
+                            }
+                          ],
+                          "id": "9c4c26bb-a1e6-4c78-a7a2-b973346c6f3f",
+                          "createdAt": "2026-07-28T01:47:05.000Z",
+                          "updatedAt": "2026-07-28T01:47:05.000Z",
+                          "uid": "35240-9c4c26bb-a1e6-4c78-a7a2-b973346c6f3f"
+                        },
+                        {
+                          "name": "Google Cloud Dialogflow CX List agents",
+                          "id": "fd303ac4-be22-4e74-9c05-1f60e4936c1c",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":projectId",
+                                "locations",
+                                ":location",
+                                "agents"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "917b5980-e042-440e-9e4c-003111a39cb7",
+                                  "key": "projectId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "047af652-f1b6-401a-b7a3-4b8e56a78953",
+                                  "key": "location",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Lists all agents in a project and location."
+                          },
+                          "response": [
+                            {
+                              "id": "7ffc3581-4829-49c6-84e8-abbdd8ca1901",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "agents"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "projectId"
+                                    },
+                                    {
+                                      "key": "location"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"agents\": [\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"defaultLanguageCode\": \"<string>\",\n      \"supportedLanguageCodes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"timeZone\": \"<string>\",\n      \"description\": \"<string>\",\n      \"startFlow\": \"<string>\",\n      \"enableStackdriverLogging\": \"<boolean>\",\n      \"enableSpellCorrection\": \"<boolean>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"defaultLanguageCode\": \"<string>\",\n      \"supportedLanguageCodes\": [\n        \"<string>\",\n        \"<string>\"\n      ],\n      \"timeZone\": \"<string>\",\n      \"description\": \"<string>\",\n      \"startFlow\": \"<string>\",\n      \"enableStackdriverLogging\": \"<boolean>\",\n      \"enableSpellCorrection\": \"<boolean>\"\n    }\n  ]\n}",
+                              "createdAt": "2026-07-28T01:47:05.000Z",
+                              "updatedAt": "2026-07-28T01:47:05.000Z",
+                              "uid": "35240-7ffc3581-4829-49c6-84e8-abbdd8ca1901"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:47:05.000Z",
+                          "updatedAt": "2026-07-28T01:47:05.000Z",
+                          "uid": "35240-fd303ac4-be22-4e74-9c05-1f60e4936c1c"
+                        },
+                        {
+                          "name": "Google Cloud Dialogflow CX Create an agent",
+                          "id": "fef8a6f6-dbe8-4ef4-b713-fba14474dae1",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"defaultLanguageCode\": \"<string>\",\n  \"supportedLanguageCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"timeZone\": \"<string>\",\n  \"description\": \"<string>\",\n  \"startFlow\": \"<string>\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableSpellCorrection\": \"<boolean>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":projectId",
+                                "locations",
+                                ":location",
+                                "agents"
+                              ],
+                              "variable": [
+                                {
+                                  "id": "2139adbb-b683-4213-880b-36fc33458ed6",
+                                  "key": "projectId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "79770206-e0fa-485e-8cc9-625dbdbb6fe4",
+                                  "key": "location",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Creates a new Dialogflow CX agent."
+                          },
+                          "response": [
+                            {
+                              "id": "eb78a1da-d9b7-483c-853b-a895d479fb17",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"defaultLanguageCode\": \"<string>\",\n  \"supportedLanguageCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"timeZone\": \"<string>\",\n  \"description\": \"<string>\",\n  \"startFlow\": \"<string>\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableSpellCorrection\": \"<boolean>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "agents"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "projectId"
+                                    },
+                                    {
+                                      "key": "location"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"name\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"defaultLanguageCode\": \"<string>\",\n  \"supportedLanguageCodes\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"timeZone\": \"<string>\",\n  \"description\": \"<string>\",\n  \"startFlow\": \"<string>\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableSpellCorrection\": \"<boolean>\"\n}",
+                              "createdAt": "2026-07-28T01:47:05.000Z",
+                              "updatedAt": "2026-07-28T01:47:05.000Z",
+                              "uid": "35240-eb78a1da-d9b7-483c-853b-a895d479fb17"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:47:05.000Z",
+                          "updatedAt": "2026-07-28T01:47:05.000Z",
+                          "uid": "35240-fef8a6f6-dbe8-4ef4-b713-fba14474dae1"
+                        }
+                      ],
+                      "id": "f5f016b9-4f7b-44bf-b458-ec3d1921ccde",
+                      "createdAt": "2026-07-28T01:47:05.000Z",
+                      "updatedAt": "2026-07-28T01:47:05.000Z",
+                      "uid": "35240-f5f016b9-4f7b-44bf-b458-ec3d1921ccde"
+                    }
+                  ],
+                  "id": "8bcb1745-c74b-4c70-a50a-d85bf7e4d025",
+                  "createdAt": "2026-07-28T01:47:05.000Z",
+                  "updatedAt": "2026-07-28T01:47:05.000Z",
+                  "uid": "35240-8bcb1745-c74b-4c70-a50a-d85bf7e4d025"
+                }
+              ],
+              "id": "e8fec82f-4464-4fed-9e1f-16b9d3a93407",
+              "createdAt": "2026-07-28T01:47:05.000Z",
+              "updatedAt": "2026-07-28T01:47:05.000Z",
+              "uid": "35240-e8fec82f-4464-4fed-9e1f-16b9d3a93407"
+            }
+          ],
+          "id": "41fdee7a-5d62-4982-aeb8-db0ee793002d",
+          "createdAt": "2026-07-28T01:47:05.000Z",
+          "updatedAt": "2026-07-28T01:47:05.000Z",
+          "uid": "35240-41fdee7a-5d62-4982-aeb8-db0ee793002d"
+        }
+      ],
+      "id": "e60e61cf-9299-45a1-996f-8151b87449f0",
+      "createdAt": "2026-07-28T01:47:05.000Z",
+      "updatedAt": "2026-07-28T01:47:05.000Z",
+      "uid": "35240-e60e61cf-9299-45a1-996f-8151b87449f0"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://dialogflow.googleapis.com/v3"
+    }
+  ]
+}

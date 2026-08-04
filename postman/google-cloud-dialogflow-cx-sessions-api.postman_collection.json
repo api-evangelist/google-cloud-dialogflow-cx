@@ -1,0 +1,237 @@
+{
+  "info": {
+    "_postman_id": "1e202009-de40-4138-941a-28fd3bc1b01d",
+    "name": "Google Cloud Dialogflow CX Agents Sessions API",
+    "description": "The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:47:22.000Z",
+    "updatedAt": "2026-07-28T01:47:22.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-1e202009-de40-4138-941a-28fd3bc1b01d"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "{location}",
+                  "item": [
+                    {
+                      "name": "agents",
+                      "item": [
+                        {
+                          "name": "{agentId}",
+                          "item": [
+                            {
+                              "name": "sessions",
+                              "item": [
+                                {
+                                  "name": "{sessionId}:detectIntent",
+                                  "item": [
+                                    {
+                                      "name": "Google Cloud Dialogflow CX Detect intent",
+                                      "id": "e071478f-3adf-4591-b120-bfa317dba136",
+                                      "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                      },
+                                      "request": {
+                                        "method": "POST",
+                                        "header": [
+                                          {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                          },
+                                          {
+                                            "key": "Accept",
+                                            "value": "application/json"
+                                          }
+                                        ],
+                                        "body": {
+                                          "mode": "raw",
+                                          "raw": "{\n  \"queryInput\": {\n    \"text\": {\n      \"text\": \"<string>\"\n    },\n    \"languageCode\": \"<string>\"\n  }\n}",
+                                          "options": {
+                                            "raw": {
+                                              "headerFamily": "json",
+                                              "language": "json"
+                                            }
+                                          }
+                                        },
+                                        "url": {
+                                          "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId/sessions/{{sessionId}}:detectIntent",
+                                          "host": [
+                                            "{{baseUrl}}"
+                                          ],
+                                          "path": [
+                                            "projects",
+                                            ":projectId",
+                                            "locations",
+                                            ":location",
+                                            "agents",
+                                            ":agentId",
+                                            "sessions",
+                                            "{{sessionId}}:detectIntent"
+                                          ],
+                                          "variable": [
+                                            {
+                                              "id": "9f8e63cc-f987-461e-a707-73f0d6899dc0",
+                                              "key": "projectId",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "46091465-d1be-495e-ba33-24c9f470fb34",
+                                              "key": "location",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            },
+                                            {
+                                              "id": "14b7c51d-e167-4de8-98cd-2ef48501be8b",
+                                              "key": "agentId",
+                                              "value": "<string>",
+                                              "description": "(Required) "
+                                            }
+                                          ]
+                                        },
+                                        "description": "Processes a natural language query and returns structured, actionable data."
+                                      },
+                                      "response": [
+                                        {
+                                          "id": "33955519-5ff4-44a7-a962-8260a698688d",
+                                          "name": "Successful response",
+                                          "originalRequest": {
+                                            "method": "POST",
+                                            "header": [
+                                              {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                              },
+                                              {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                              }
+                                            ],
+                                            "body": {
+                                              "mode": "raw",
+                                              "raw": "{\n  \"queryInput\": {\n    \"text\": {\n      \"text\": \"<string>\"\n    },\n    \"languageCode\": \"<string>\"\n  }\n}",
+                                              "options": {
+                                                "raw": {
+                                                  "headerFamily": "json",
+                                                  "language": "json"
+                                                }
+                                              }
+                                            },
+                                            "url": {
+                                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/agents/:agentId/sessions/{{sessionId}}:detectIntent",
+                                              "host": [
+                                                "{{baseUrl}}"
+                                              ],
+                                              "path": [
+                                                "projects",
+                                                ":projectId",
+                                                "locations",
+                                                ":location",
+                                                "agents",
+                                                ":agentId",
+                                                "sessions",
+                                                "{{sessionId}}:detectIntent"
+                                              ],
+                                              "variable": [
+                                                {
+                                                  "key": "projectId"
+                                                },
+                                                {
+                                                  "key": "location"
+                                                },
+                                                {
+                                                  "key": "agentId"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "status": "OK",
+                                          "code": 200,
+                                          "_postman_previewlanguage": "json",
+                                          "header": [
+                                            {
+                                              "key": "Content-Type",
+                                              "value": "application/json"
+                                            }
+                                          ],
+                                          "cookie": [],
+                                          "responseTime": null,
+                                          "body": "{\n  \"responseId\": \"<string>\",\n  \"queryResult\": {\n    \"text\": \"<string>\",\n    \"intent\": {\n      \"name\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"trainingPhrases\": [\n        {\n          \"id\": \"<string>\",\n          \"parts\": [\n            {\n              \"text\": \"<string>\",\n              \"parameterId\": \"<string>\"\n            },\n            {\n              \"text\": \"<string>\",\n              \"parameterId\": \"<string>\"\n            }\n          ],\n          \"repeatCount\": \"<integer>\"\n        },\n        {\n          \"id\": \"<string>\",\n          \"parts\": [\n            {\n              \"text\": \"<string>\",\n              \"parameterId\": \"<string>\"\n            },\n            {\n              \"text\": \"<string>\",\n              \"parameterId\": \"<string>\"\n            }\n          ],\n          \"repeatCount\": \"<integer>\"\n        }\n      ],\n      \"parameters\": [\n        {\n          \"id\": \"<string>\",\n          \"entityType\": \"<string>\",\n          \"isList\": \"<boolean>\"\n        },\n        {\n          \"id\": \"<string>\",\n          \"entityType\": \"<string>\",\n          \"isList\": \"<boolean>\"\n        }\n      ],\n      \"priority\": \"<integer>\",\n      \"isFallback\": \"<boolean>\",\n      \"description\": \"<string>\"\n    },\n    \"intentDetectionConfidence\": \"<number>\",\n    \"responseMessages\": [\n      {\n        \"text\": {\n          \"text\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      },\n      {\n        \"text\": {\n          \"text\": [\n            \"<string>\",\n            \"<string>\"\n          ]\n        }\n      }\n    ]\n  }\n}",
+                                          "createdAt": "2026-07-28T01:47:23.000Z",
+                                          "updatedAt": "2026-07-28T01:47:23.000Z",
+                                          "uid": "35240-33955519-5ff4-44a7-a962-8260a698688d"
+                                        }
+                                      ],
+                                      "createdAt": "2026-07-28T01:47:23.000Z",
+                                      "updatedAt": "2026-07-28T01:47:23.000Z",
+                                      "uid": "35240-e071478f-3adf-4591-b120-bfa317dba136"
+                                    }
+                                  ],
+                                  "id": "453e51cb-cf99-4561-8691-8e8e4cc5eba2",
+                                  "createdAt": "2026-07-28T01:47:23.000Z",
+                                  "updatedAt": "2026-07-28T01:47:23.000Z",
+                                  "uid": "35240-453e51cb-cf99-4561-8691-8e8e4cc5eba2"
+                                }
+                              ],
+                              "id": "a72e17b7-6af2-4614-bd4a-2e4879867cbd",
+                              "createdAt": "2026-07-28T01:47:23.000Z",
+                              "updatedAt": "2026-07-28T01:47:23.000Z",
+                              "uid": "35240-a72e17b7-6af2-4614-bd4a-2e4879867cbd"
+                            }
+                          ],
+                          "id": "137ebf02-6687-410d-92cd-36ec0bba5b8c",
+                          "createdAt": "2026-07-28T01:47:23.000Z",
+                          "updatedAt": "2026-07-28T01:47:23.000Z",
+                          "uid": "35240-137ebf02-6687-410d-92cd-36ec0bba5b8c"
+                        }
+                      ],
+                      "id": "b0090d3d-7071-4487-93ce-5d592e51da9b",
+                      "createdAt": "2026-07-28T01:47:23.000Z",
+                      "updatedAt": "2026-07-28T01:47:23.000Z",
+                      "uid": "35240-b0090d3d-7071-4487-93ce-5d592e51da9b"
+                    }
+                  ],
+                  "id": "edff6352-3fcb-48d3-a50b-ea7b5d800990",
+                  "createdAt": "2026-07-28T01:47:23.000Z",
+                  "updatedAt": "2026-07-28T01:47:23.000Z",
+                  "uid": "35240-edff6352-3fcb-48d3-a50b-ea7b5d800990"
+                }
+              ],
+              "id": "f721843a-7e59-4f2c-9119-3ae54f6946f2",
+              "createdAt": "2026-07-28T01:47:23.000Z",
+              "updatedAt": "2026-07-28T01:47:23.000Z",
+              "uid": "35240-f721843a-7e59-4f2c-9119-3ae54f6946f2"
+            }
+          ],
+          "id": "02161e03-dd85-4a31-973a-71e760f670a8",
+          "createdAt": "2026-07-28T01:47:23.000Z",
+          "updatedAt": "2026-07-28T01:47:23.000Z",
+          "uid": "35240-02161e03-dd85-4a31-973a-71e760f670a8"
+        }
+      ],
+      "id": "a33672b2-397d-46c6-a030-a4fd90b82aff",
+      "createdAt": "2026-07-28T01:47:23.000Z",
+      "updatedAt": "2026-07-28T01:47:23.000Z",
+      "uid": "35240-a33672b2-397d-46c6-a030-a4fd90b82aff"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://dialogflow.googleapis.com/v3"
+    },
+    {
+      "key": "sessionId",
+      "value": "<string>"
+    }
+  ]
+}
