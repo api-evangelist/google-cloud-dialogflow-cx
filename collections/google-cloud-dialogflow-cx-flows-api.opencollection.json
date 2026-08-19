@@ -1,0 +1,78 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Dialogflow CX Agents Flows API",
+    "version": "3.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Flows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX List flows",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/flows",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all flows in an agent."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Create a flow",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/flows",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new flow within an agent."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

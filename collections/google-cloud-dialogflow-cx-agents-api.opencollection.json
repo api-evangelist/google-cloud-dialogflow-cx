@@ -1,0 +1,156 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Dialogflow CX Agents API",
+    "version": "3.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Agents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX List agents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists all agents in a project and location."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Create an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a new Dialogflow CX agent."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Get an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a specific agent by ID."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Update an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing agent."
+        },
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Delete an agent",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a specific agent."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

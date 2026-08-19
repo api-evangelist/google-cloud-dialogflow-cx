@@ -1,0 +1,191 @@
+{
+  "item": [
+    {
+      "id": "8cb125c2-e8fe-459e-afcd-806f9b46b330",
+      "name": "Sessions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9ac7c65e-ef1a-4807-a7c5-8b3e97eaa7c0",
+          "name": "Google Cloud Dialogflow CX Detect intent",
+          "request": {
+            "name": "Google Cloud Dialogflow CX Detect intent",
+            "description": {
+              "content": "Processes a natural language query and returns structured, actionable data.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "projects",
+                ":projectId",
+                "locations",
+                ":location",
+                "agents",
+                ":agentId",
+                "sessions",
+                "{{sessionId}}:detectIntent"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "location",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "agentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"queryInput\": {\n    \"text\": {\n      \"text\": \"<string>\"\n    },\n    \"languageCode\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ab5ae955-8d98-4318-969b-c3cec4cfaaaf",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "projects",
+                    ":projectId",
+                    "locations",
+                    ":location",
+                    "agents",
+                    ":agentId",
+                    "sessions",
+                    "{{sessionId}}:detectIntent"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "location",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "agentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"queryInput\": {\n    \"text\": {\n      \"text\": \"<string>\"\n    },\n    \"languageCode\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"responseId\": \"string\",\n  \"queryResult\": {\n    \"text\": \"string\",\n    \"intent\": {\n      \"name\": \"string\",\n      \"displayName\": \"string\",\n      \"trainingPhrases\": [\n        {\n          \"id\": \"string\",\n          \"parts\": [\n            {\n              \"text\": \"string\",\n              \"parameterId\": \"string\"\n            },\n            {\n              \"text\": \"string\",\n              \"parameterId\": \"string\"\n            }\n          ],\n          \"repeatCount\": 1129\n        },\n        {\n          \"id\": \"string\",\n          \"parts\": [\n            {\n              \"text\": \"string\",\n              \"parameterId\": \"string\"\n            },\n            {\n              \"text\": \"string\",\n              \"parameterId\": \"string\"\n            }\n          ],\n          \"repeatCount\": 908\n        }\n      ],\n      \"parameters\": [\n        {\n          \"id\": \"string\",\n          \"entityType\": \"string\",\n          \"isList\": false\n        },\n        {\n          \"id\": \"string\",\n          \"entityType\": \"string\",\n          \"isList\": true\n        }\n      ],\n      \"priority\": 2482,\n      \"isFallback\": false,\n      \"description\": \"string\"\n    },\n    \"intentDetectionConfidence\": 9063.084648608788,\n    \"responseMessages\": [\n      {\n        \"text\": {\n          \"text\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      },\n      {\n        \"text\": {\n          \"text\": [\n            \"string\",\n            \"string\"\n          ]\n        }\n      }\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://dialogflow.googleapis.com/v3",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "sessionId"
+    }
+  ],
+  "info": {
+    "_postman_id": "3eab1460-2ae6-49e4-a758-7fc115f66f50",
+    "name": "Google Cloud Dialogflow CX Agents Sessions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.\n\nContact Support:\n Name: Google Cloud",
+      "type": "text/plain"
+    }
+  }
+}

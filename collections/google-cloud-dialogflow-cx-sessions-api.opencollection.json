@@ -1,0 +1,55 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Google Cloud Dialogflow CX Agents Sessions API",
+    "version": "3.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sessions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Google Cloud Dialogflow CX Detect intent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://dialogflow.googleapis.com/v3/projects/:projectId/locations/:location/agents/:agentId/sessions/:sessionId:detectIntent",
+            "params": [
+              {
+                "name": "projectId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "location",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "agentId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sessionId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Processes a natural language query and returns structured, actionable data."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
