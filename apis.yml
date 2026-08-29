@@ -4,6 +4,18 @@ description: >-
   Google Cloud Dialogflow CX is an advanced conversational AI platform for building complex virtual agents and chatbots.
   It provides a visual flow builder, advanced NLU capabilities, multi-turn conversation management, and seamless
   integration across channels including web, mobile, and telephony.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
