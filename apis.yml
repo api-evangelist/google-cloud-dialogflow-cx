@@ -69,6 +69,8 @@ apis:
   humanURL: https://cloud.google.com/dialogflow/cx/docs
   baseURL: https://dialogflow.googleapis.com
   tags:
+  - Flow
+  tags_raw:
   - Flows
   properties:
   - type: OpenAPI
