@@ -1,10 +1,7 @@
 {
   "provider": "google-cloud-dialogflow-cx",
   "sources": [
-    "google-cloud-dialogflow-cx-agents-api-openapi.yml",
-    "google-cloud-dialogflow-cx-flows-api-openapi.yml",
-    "google-cloud-dialogflow-cx-intents-api-openapi.yml",
-    "google-cloud-dialogflow-cx-sessions-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
     "google-cloud-dialogflow-cx-agents-api-openapi.yml",
@@ -16,11 +13,14 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "google-cloud-dialogflow-cx-agents-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-cloud-dialogflow-cx-flows-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-cloud-dialogflow-cx-intents-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "google-cloud-dialogflow-cx-sessions-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "google-cloud-dialogflow-cx-agents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-cloud-dialogflow-cx-flows-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-cloud-dialogflow-cx-intents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "google-cloud-dialogflow-cx-sessions-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

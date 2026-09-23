@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Google Cloud Dialogflow CX Agents Sessions API
+  title: Google Cloud Dialogflow CX Sessions API
   description: The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.
   version: 3.0.0
   contact:
