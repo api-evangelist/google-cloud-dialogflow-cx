@@ -1,0 +1,25 @@
+slug: google-cloud-dialogflow-cx
+provider: Google Cloud Dialogflow CX
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Agents
+  spec_file: google-cloud-dialogflow-cx-agents-api-openapi.yml
+  capability_id: BC-610.60
+  capability_id_l1: BC-610
+  capability_name: Artificial Intelligence Management
+  confidence: 0.7
+  evidence: '''Create an agent''; vendor: ''advanced conversational AI platform for building complex virtual
+    agents and chatbots'''
+  reason: Building and managing conversational AI agents is AI/ML asset lifecycle work; it is a developer-facing
+    AI platform, not a contact-centre deployment per se, so AI Management is the honest mapping.
