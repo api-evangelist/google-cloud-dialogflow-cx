@@ -1,4 +1,4 @@
-# Google Cloud Dialogflow CX (google-cloud-dialogflow-cx)
+# Google Cloud Dialogflow CX
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,69 +66,158 @@
 
 Google Cloud Dialogflow CX is an advanced conversational AI platform for building complex virtual agents and chatbots. It provides a visual flow builder, advanced NLU capabilities, multi-turn conversation management, and seamless integration across channels including web, mobile, and telephony.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-dialogflow-cx/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-dialogflow-cx/refs/heads/main/apis.yml)
+**Areas:** Chatbots · Conversational AI · Dialogflow · Google Cloud · Natural Language Understanding · Virtual Agents
 
-## Scope
+## Google Cloud Dialogflow CX on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Cloud Dialogflow CX is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-cloud-dialogflow-cx/](https://apis.io/providers/google-cloud-dialogflow-cx/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Chatbots
-- Conversational AI
-- Dialogflow
-- Google Cloud
-- NLU
-- Virtual Agents
+- [Google Cloud Dialogflow CX Agents API](https://apis.io/apis/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-agents-api/) — The Agents API from Google Cloud Dialogflow CX — 2 operation(s) for agents.
+- [Google Cloud Dialogflow CX Flows API](https://apis.io/apis/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-flows-api/) — The Flows API from Google Cloud Dialogflow CX — 1 operation(s) for flows.
+- [Google Cloud Dialogflow CX Intents API](https://apis.io/apis/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-intents-api/) — The Intents API from Google Cloud Dialogflow CX — 1 operation(s) for intents.
+- [Google Cloud Dialogflow CX Sessions API](https://apis.io/apis/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-sessions-api/) — The Sessions API from Google Cloud Dialogflow CX — 1 operation(s) for sessions.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Cloud Dialogflow CX API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Dialogflow CX API enables building and managing conversational agents with flows, pages, intents, entity types, and session management for advanced multi-turn conversations.
+- [Google Cloud Dialogflow Cx Agentic Access](https://apis.io/agentic-access/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-agentic-access/)
 
-- **Human URL:** [https://cloud.google.com/dialogflow/cx/docs](https://cloud.google.com/dialogflow/cx/docs)
-- **Base URL:** `https://dialogflow.googleapis.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Agents
-- Dialogflow
-- Flows
-- Intents
+- [Agent](https://apis.io/schemas/google-cloud-dialogflow-cx/agent/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://cloud.google.com/dialogflow/cx/docs/reference/rest)
-- [OpenAPI](openapi/openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/openapi.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/openapi.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://cloud.google.com/dialogflow/cx/docs/concept/auth)
-- [Getting Started](https://cloud.google.com/dialogflow/cx/docs/quick)
-- [JSON Schema](json-schema/agent.json) — [JSON Schema](https://json-schema.org/specification)
-- [J S O N L D Context](json-ld/context.jsonld)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [context Context](https://apis.io/jsonld/google-cloud-dialogflow-cx/context/)
 
-- [GitHub Organization](https://github.com/googleapis)
-- [Portal](https://cloud.google.com/dialogflow/cx/docs)
-- [Getting Started](https://cloud.google.com/dialogflow/cx/docs/quick)
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [Google Cloud Dialogflow CX Agents API](https://apis.io/collections/google-cloud-dialogflow-cx/open-google-cloud-dialogflow-cx-agents-api/)
+- [Google Cloud Dialogflow CX Agents Flows API](https://apis.io/collections/google-cloud-dialogflow-cx/open-google-cloud-dialogflow-cx-flows-api/)
+- [Google Cloud Dialogflow CX Agents Intents API](https://apis.io/collections/google-cloud-dialogflow-cx/open-google-cloud-dialogflow-cx-intents-api/)
+- [Google Cloud Dialogflow CX Agents Sessions API](https://apis.io/collections/google-cloud-dialogflow-cx/open-google-cloud-dialogflow-cx-sessions-api/)
+- [Google Cloud Dialogflow CX API](https://apis.io/collections/google-cloud-dialogflow-cx/open-openapi/)
+- [Google Cloud Dialogflow CX Agents API](https://apis.io/collections/google-cloud-dialogflow-cx/postman-google-cloud-dialogflow-cx-agents-api/)
+- [Google Cloud Dialogflow CX Agents Flows API](https://apis.io/collections/google-cloud-dialogflow-cx/postman-google-cloud-dialogflow-cx-flows-api/)
+- [Google Cloud Dialogflow CX Agents Intents API](https://apis.io/collections/google-cloud-dialogflow-cx/postman-google-cloud-dialogflow-cx-intents-api/)
+- [Google Cloud Dialogflow CX Agents Sessions API](https://apis.io/collections/google-cloud-dialogflow-cx/postman-google-cloud-dialogflow-cx-sessions-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Cloud Dialogflow CX — jsonschema rules](https://apis.io/rules/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Cloud Dialogflow Cx Authentication](https://apis.io/security/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-authentication/)
+- [Google Cloud Dialogflow Cx Domain Security](https://apis.io/security/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-domain-security/)
+- [Google Cloud Dialogflow Cx Vulnerability Disclosure](https://apis.io/security/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Cloud Dialogflow Cx Scopes](https://apis.io/scopes/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Cloud Dialogflow Cx Plans Pricing](https://apis.io/plans/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Cloud Dialogflow Cx Rate Limits](https://apis.io/rate-limits/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Cloud Dialogflow Cx Finops](https://apis.io/finops/google-cloud-dialogflow-cx/google-cloud-dialogflow-cx-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://cloud.google.com/dialogflow/cx/docs)
-- [Authentication](https://cloud.google.com/dialogflow/cx/docs/concept/auth)
+- [Getting started](https://cloud.google.com/dialogflow/cx/docs/quick)
 - [Pricing](https://cloud.google.com/dialogflow/pricing)
-- [Terms of Service](https://cloud.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://cloud.google.com/dialogflow/cx/docs/support)
-- [J S O N L D Context](json-ld/context.jsonld)
-- [Integrations](https://cloud.google.com/marketplace)
+- [Terms of service](https://cloud.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/googleapis)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 40.7** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 54.2 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 20.2 |
+| Access clarity | 39.5 |
+
+**Agent readiness 24.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 40.2** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-cloud-dialogflow-cx/](https://apis.io/providers/google-cloud-dialogflow-cx/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Cloud Dialogflow CX: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-cloud-dialogflow-cx/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
